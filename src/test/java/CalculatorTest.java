@@ -120,5 +120,20 @@ public class CalculatorTest {
 			assertEquals(Math.round(calc.add(first, second)), Math.round(result));
 		}
 	}
+	@Test
+	public void test8() {
+		
+		double first = 0.0;
+		double second = 0.0;
+		double result = 0.0;
+		
+		for (int i = 0; i < 5; i++){
+			first = rand1.nextDouble()*1337;
+			second = rand1.nextDouble()*1337;
+			result = first + second;
+			LOG.info("Testing the method add with " +first+" and "+second);
+			assertEquals(Math.round(calc.add(first, second)), Math.round(result));
+		}
+	}
 
 }
